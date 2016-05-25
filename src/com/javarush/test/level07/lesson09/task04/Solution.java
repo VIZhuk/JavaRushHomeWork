@@ -31,32 +31,31 @@ public class Solution
         list.add("роза"); //0
         list.add("лира"); //1
         list.add("лоза"); //2
-
-
-
+        list.add("test"); //2
         list = fix(list);
 
         for (String s : list)
         {
             System.out.println(s);
         }
-
     }
 
     public static ArrayList<String> fix(ArrayList<String> list)
     {
         //напишите тут ваш код
+        ArrayList<String> listTemp = new ArrayList<>();
         for (String value : list) {
-            if (value.contains("л") && value.contains("р")) {
-            }
-            else if (value.contains("л")) {
-//                list.add(list.indexOf(value) + 1, value);
-            }
-            else if (value.contains("р")) {
-//                list.remove(list.indexOf(value));
+            if (value.contains("р") && value.contains("л")) {
+                listTemp.add(value);
+            } else if (value.contains("л")) {
+                listTemp.add(value);
+                listTemp.add(value);
+            } else if (value.contains("р")) {
+
+            } else {
+                listTemp.add(value);
             }
         }
-        return list;
-//        return null;
+        return listTemp;
     }
 }

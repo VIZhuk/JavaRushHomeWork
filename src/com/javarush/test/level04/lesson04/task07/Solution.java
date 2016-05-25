@@ -10,13 +10,38 @@ package com.javarush.test.level04.lesson04.task07;
 Годы 2100, 2200 и 2300 — невисокосные.
 */
 
+//        1. Если год делится на 4, перейдите к шагу 2. В противном случае перейдите к шагу 5.
+//        2. Если год делится на 100, перейдите к шагу 3. В противном случае перейдите к шагу 4.
+//        3. Если года делится на 400, перейдите к шагу 4. В противном случае перейдите к шагу 5.
+//        4. Год является високосным (с 366 дней).
+//        5. Год не является високосным (имеет 365 дней).
+
 import java.io.*;
 
 public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        int x;
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        int year = Integer.parseInt(reader.readLine());
+
+        if ((year % 4) == 0) {
+            if ((year % 100) == 0) {
+                if ((year % 400) == 0) {
+                    x = 366;
+                } else {
+                    x = 365;
+                }
+            } else {
+                x = 366;
+            }
+        } else {
+            x = 365;
+        }
+        System.out.println("количество дней в году: " + x);
 
     }
 }

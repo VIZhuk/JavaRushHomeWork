@@ -23,7 +23,6 @@ public class Solution
             minimum = min(minimum, num);
         }
 
-
         System.out.println("Minimum = " + minimum);
     }
 

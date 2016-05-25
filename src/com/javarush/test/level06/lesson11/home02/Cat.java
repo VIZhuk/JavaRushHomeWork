@@ -1,5 +1,6 @@
 package com.javarush.test.level06.lesson11.home02;
 
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 /* Статические коты
@@ -12,13 +13,20 @@ public class Cat {
     public Cat() {
     }
     //напишите тут ваш код
+    public static ArrayList<Cat> cats = new ArrayList<>();
 
     public static void main(String[] args) {
         //Создай тут 10 котов
+        for (int i = 0; i < 10; i++) {
+            cats.add(new Cat());
+        }
         printCats();
     }
 
     public static void printCats() {
         //Добавь свой код для пункта 3 тут
+        for (Cat obj : cats) {
+            System.out.println(obj);
+        }
     }
 }

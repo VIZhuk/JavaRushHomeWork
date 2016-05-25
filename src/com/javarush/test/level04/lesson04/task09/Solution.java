@@ -18,10 +18,33 @@ package com.javarush.test.level04.lesson04.task09;
 */
 
 import java.io.*;
-import java.util.Scanner;
 
-public class Solution{
-    public static void main(String[] args) throws Exception{
+public class Solution
+{
+    public static void main(String[] args) throws Exception
+    {
+
+        String color = "";
+        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        float time = Float.parseFloat(reader.readLine());
+
+        if ((time < 3))
+        {
+            color = "зеленый";
+        } else if ((time % 3) == 0)
+        {
+            color = "желтый";
+        } else if ((time % 4) == 0)
+        {
+            color = "красный";
+        } else if ((time % 5) == 0)
+        {
+            color = "зеленый";
+        }
+
+        System.out.println(color);
 
     }
 }
