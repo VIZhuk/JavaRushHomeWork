@@ -23,28 +23,24 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        BufferedReader bufferredReader = new BufferedReader(new InputStreamReader(System.in));
 
-        String color = "";
-        //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        double min = Double.parseDouble(bufferredReader.readLine());
 
-        float time = Float.parseFloat(reader.readLine());
-
-        if ((time < 3))
-        {
-            color = "зеленый";
-        } else if ((time % 3) == 0)
-        {
-            color = "желтый";
-        } else if ((time % 4) == 0)
-        {
-            color = "красный";
-        } else if ((time % 5) == 0)
-        {
-            color = "зеленый";
+        if ( (min % 5 >= 0) && (min % 5 < 3)) {
+            System.out.println("зеленый");
+        } else if ( (min % 5 >= 3) && (min % 5 < 4)) {
+            System.out.println("желтый");
+        } else if ( (min % 5 >= 4) && (min % 5 < 5)) {
+            System.out.println("красный");
         }
 
-        System.out.println(color);
+//        System.out.print(min/3 + " ");
+//        System.out.println(min%3);
+//        System.out.print(min/4 + " ");
+//        System.out.println(min%4);
+//        System.out.print(min/5 + " ");
+//        System.out.println(min%5);
 
     }
 }
