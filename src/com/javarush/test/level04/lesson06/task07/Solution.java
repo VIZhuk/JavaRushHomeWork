@@ -15,12 +15,18 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] array = new int[3];
-        for (int i = 0; i < 3; i++)
-        {
-            array[i] = Integer.parseInt(reader.readLine());
+        BufferedReader bufferredReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int a = Integer.parseInt(bufferredReader.readLine());
+        int b = Integer.parseInt(bufferredReader.readLine());
+        int c = Integer.parseInt(bufferredReader.readLine());
+
+        if (a == b && a != c) {
+            System.out.println("3");
+        } else if (b == c && b != a) {
+            System.out.println("1");
+        } else {
+            System.out.println("2");
         }
 
     }
